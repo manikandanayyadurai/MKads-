@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influencer Marketing Services | MK Ads</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #00b8d9;
+      --secondary: #121212;
+      --accent: #f9d342;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+      --influencer-accent: #e91e63;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('influencer-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, transparent 0%, rgba(233,30,99,0.1) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(233,30,99,0.5);
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem auto;
+      flex-wrap: wrap;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 220px;
+      border: 1px solid rgba(233,30,99,0.3);
+      transition: all 0.4s ease;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(233,30,99,0.2);
+      box-shadow: 0 12px 40px rgba(233,30,99,0.2);
+    }
+    
+    .stat-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      color: white;
+    }
+    
+    .features {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border-top: 4px solid var(--influencer-accent);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--influencer-accent), var(--primary));
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(233,30,99,0.15);
+    }
+    
+    .feature-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--influencer-accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--influencer-accent);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+    
+    .trends {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      padding: 5rem 2rem;
+    }
+    
+    .trends-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .trend-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--influencer-accent);
+    }
+    
+    .trend-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .trend-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--influencer-accent);
+      margin-bottom: 1rem;
+    }
+    
+    .industries {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+    }
+    
+    .industry-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .industry-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    
+    .industry-icon {
+      font-size: 2rem;
+      color: var(--influencer-accent);
+      margin-bottom: 1rem;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--influencer-accent), var(--dark));
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+      margin-top: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .animate-delay-1 { animation-delay: 0.3s; }
+    .animate-delay-2 { animation-delay: 0.6s; }
+    .animate-delay-3 { animation-delay: 0.9s; }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    
+    .company-info {
+      margin-top: 2rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <div class="logo">MK Ads</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeIn">
+      <h1>Influencer Marketing Services</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Boost Brand Visibility With Authentic Connections</p>
+      
+      <div class="stats">
+        <div class="stat-card animate__animated animate__fadeInUp">
+          <div class="stat-value">11x</div>
+          <div class="stat-label">Higher ROI Than Traditional Ads</div>
+        </div>
+        <div class="stat-card animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="stat-value">90%</div>
+          <div class="stat-label">Of Consumers Trust Influencers</div>
+        </div>
+        <div class="stat-card animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="stat-value">5x</div>
+          <div class="stat-label">Higher Engagement Rates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card animate__animated animate__fadeInLeft">
+      <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+      <h2>Why Choose Influencer Marketing?</h2>
+      <p>In today's fast-paced digital landscape, brands are increasingly turning to influencer marketing as a powerful tool to build genuine connections with their target audience. With social media platforms at the forefront, influencer marketing drives brand awareness, customer engagement, and conversions by leveraging the influence of trusted voices in the community.</p>
+      <p>Influencer marketing isn't just a trend—it's a necessity for brands aiming to cut through the noise of digital advertising.</p>
+      
+      <div class="benefits">
+        <h3>Key Benefits:</h3>
+        <ul>
+          <li><strong>Expand Reach:</strong> Influencers can expose your brand to new audiences through their loyal followings.</li>
+          <li><strong>Drive Conversions:</strong> With personalized recommendations, influencers encourage authentic interactions that result in higher sales conversions.</li>
+          <li><strong>Build Trust:</strong> Consumers trust influencer recommendations more than traditional advertising.</li>
+          <li><strong>Content Creation:</strong> Gain high-quality, authentic content for your brand's marketing channels.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-1s">
+      <div class="feature-icon"><i class="fas fa-chess"></i></div>
+      <h2>Our Approach To Influencer Marketing</h2>
+      <p>At MK Ads, we go beyond just matching influencers with brands. We focus on building partnerships that align with your brand's vision and deliver measurable results. Here's how we make it happen:</p>
+      
+      <div class="approach-steps">
+        <div class="step">
+          <h3><i class="fas fa-search"></i> Influencer Discovery & Vetting</h3>
+          <p>Using AI-driven tools and market research, we identify influencers who not only resonate with your brand's message but also have authentic engagement and follower growth.</p>
+        </div>
+        
+        <div class="step">
+          <h3><i class="fas fa-chess-board"></i> Customized Campaign Strategies</h3>
+          <p>We create bespoke influencer marketing strategies that align with your brand's KPIs, whether it's building awareness, driving traffic, or increasing conversions.</p>
+        </div>
+        
+        <div class="step">
+          <h3><i class="fas fa-share-alt"></i> Cross-Platform Campaigns</h3>
+          <p>Our influencer marketing campaigns span multiple platforms like Instagram, YouTube, TikTok, and emerging channels like Twitch and Threads to target your ideal customers effectively.</p>
+        </div>
+        
+        <div class="step">
+          <h3><i class="fas fa-chart-line"></i> Performance Analytics & Reporting</h3>
+          <p>With our expertise in data analytics, we track campaign performance in real-time, offering insights into engagement metrics, conversions, and ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trends">
+    <div class="trends-container">
+      <h2 class="animate__animated animate__fadeIn">Influencer Marketing Trends in 2024</h2>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Stay ahead of the curve by tapping into the latest trends shaping the influencer marketing landscape:</p>
+      
+      <div class="trend-card animate__animated animate__fadeInUp">
+        <h3>Micro and Nano Influencers</h3>
+        <p>Collaborating with influencers who have smaller but highly engaged audiences can yield better conversion rates and brand loyalty. These influencers often have niche audiences with higher trust levels.</p>
+      </div>
+      
+      <div class="trend-card animate__animated animate__fadeInUp animate__delay-1s">
+        <h3>Long-term Partnerships</h3>
+        <p>Brands are moving away from one-off posts to fostering long-term relationships with influencers to create consistent brand storytelling and deeper audience connections.</p>
+      </div>
+      
+      <div class="trend-card animate__animated animate__fadeInUp animate__delay-2s">
+        <h3>AI-Powered Influencers</h3>
+        <p>AI-generated influencers are gaining popularity, blending technology with authentic engagement to deliver creative campaigns that can operate 24/7 across global markets.</p>
+      </div>
+      
+      <div class="trend-card animate__animated animate__fadeInUp animate__delay-3s">
+        <h3>Shoppable Content</h3>
+        <p>With social commerce growing rapidly, influencer-generated content is increasingly featuring shoppable links, allowing consumers to make purchases directly from posts.</p>
+      </div>
+      
+      <div class="trend-card animate__animated animate__fadeInUp">
+        <h3>Live Streaming & Video Content</h3>
+        <p>With platforms like YouTube and Twitch growing, live streams and interactive video content from influencers drive deeper engagement and real-time conversions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="industries">
+    <h2 class="animate__animated animate__fadeIn">Industries We Serve</h2>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">No matter the industry, our influencer marketing campaigns deliver results.</p>
+    
+    <div class="industry-grid">
+      <div class="industry-card animate__animated animate__fadeInUp">
+        <div class="industry-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>iGaming</h3>
+        <p>Connect with gaming influencers to reach passionate players and drive app installs.</p>
+      </div>
+      
+      <div class="industry-card animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="industry-icon"><i class="fas fa-tshirt"></i></div>
+        <h3>Fashion</h3>
+        <p>Showcase your products through style influencers and fashion content creators.</p>
+      </div>
+      
+      <div class="industry-card animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="industry-icon"><i class="fas fa-spa"></i></div>
+        <h3>Beauty</h3>
+        <p>Partner with beauty gurus for authentic product reviews and tutorials.</p>
+      </div>
+      
+      <div class="industry-card animate__animated animate__fadeInUp animate__delay-3s">
+        <div class="industry-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Fitness</h3>
+        <p>Collaborate with fitness influencers to promote health and wellness products.</p>
+      </div>
+      
+      <div class="industry-card animate__animated animate__fadeInUp">
+        <div class="industry-icon"><i class="fas fa-laptop"></i></div>
+        <h3>Technology</h3>
+        <p>Work with tech reviewers to demonstrate your product's features and benefits.</p>
+      </div>
+      
+      <div class="industry-card animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="industry-icon"><i class="fas fa-shopping-bag"></i></div>
+        <h3>Consumer Goods</h3>
+        <p>Show your products in action through everyday lifestyle influencers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content animate__animated animate__fadeIn">
+      <h2>Ready To Amplify Your Brand With Influencer Marketing?</h2>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Contact us today to discuss how we can elevate your brand's presence through tailored influencer marketing strategies.</p>
+      <button class="cta-button animate__animated animate__pulse animate__infinite">Get Started Now</button>
+    </div>
+  </section>
+
+  <footer class="animate__animated animate__fadeIn">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <div class="company-info">
+      <p><strong>MK Ads</strong></p>
+    <p>415 Madison Avenue, 14th Floor, Manhattan, New York, 10017</p>
+      <p>S 317, GK 2, New Delhi, India</p>
+      <p>contact@mkads.com</p>
+      <p>Opening Hours: Monday-Friday | 08:00 AM-06:00 PM</p>
+    </div>
+    
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cancellation.html">Cancellation/Return Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission handling
+    document.querySelector('.cta-button').addEventListener('click', function() {
+      window.location.href = 'contact.html';
+    });
+    
+    // Scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.animate__animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.classList[1];
+            entry.target.classList.add(animation);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>

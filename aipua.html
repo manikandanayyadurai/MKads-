@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered User Acquisition | Next-Gen Ad Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6e48aa;
+            --secondary: #4776e6;
+            --accent: #ff6b6b;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #6e48aa, #4776e6, #9d50bb, #4776e6);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
+        
+        .content-overlay {
+            background-color: rgba(44, 62, 80, 0.85);
+            min-height: 100vh;
+        }
+        
+       
+        nav {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .hero {
+            padding: 5rem 5% 8rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            padding: 5rem 5%;
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            margin: 2rem 5%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+        
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        /* Client Logos */
+        .clients {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .client-logo {
+            height: 60px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            margin-top: 5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Animations */
+        .animate-delay-1 { animation-delay: 0.3s; }
+        .animate-delay-2 { animation-delay: 0.6s; }
+        .animate-delay-3 { animation-delay: 0.9s; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-overlay">
+      
+        <nav class="animate__animated animate__fadeIn">
+            <div class="logo">
+                <h2>MK Ads</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#adsynapse">AdSynapse</a>
+                <a href="#adapt">ADAPT</a>
+                 <li class="dropdown animate__animated animate__fadeIn animate__delay-1s">
+          <a href="#">AI Solution</a>
+          <ul class="dropdown-content">
+            <li><a href="aipua.html">AI Powered User Acquisition</a></li>
+            <li><a href="igaming.html">iGaming</a></li>
+            <li><a href="retargeting.html">Retargeting</a></li>
+            <li><a href="branding.html">Branding</a></li>
+            <li><a href="im.html">Influencer Marketing</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+                
+            </div>
+        </nav>
+        
+        <section class="hero">
+            <h1 class="animate__animated animate__fadeInDown">AI-Powered User Acquisition</h1>
+            <p class="animate__animated animate__fadeIn animate-delay-1">Elevate Your Mobile App Growth With AI</p>
+            <p class="animate__animated animate__fadeIn animate-delay-2">Enhance your mobile app's user acquisition, retention, and brand performance using cutting-edge AI technology.</p>
+        </section>
+        
+        <div class="container">
+           
+            <section class="section animate__animated animate__fadeInUp animate-delay-1">
+                <h2>Build A High-Quality User Base</h2>
+                <p>Develop a robust user base for your app with our 100% transparent, AI-driven targeting and acquisition strategies. Our campaigns leverage unbiased historical proprietary data to pinpoint the most valuable users for your app.</p>
+                
+                <div class="features">
+                    <div class="feature-card animate__animated animate__fadeInUp animate-delay-2">
+                        <i class="fas fa-brain"></i>
+                        <h3>Cognitive Learning</h3>
+                        <p>By analyzing historical user behavior, interests, and in-app engagement, we identify the top user segments most likely to convert.</p>
+                    </div>
+                    
+                    <div class="feature-card animate__animated animate__fadeInUp animate-delay-3">
+                        <i class="fas fa-robot"></i>
+                        <h3>ML Optimization</h3>
+                        <p>Optimizing your campaign for maximum ROI using our advanced Machine Learning Optimization Technology.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section animate__animated animate__fadeInUp animate-delay-2">
+                <h2>Learn, Optimize, And Scale With Machine Learning</h2>
+                <p>Once your campaign is set up, our machine learning platform starts learning to meet your objectives. We employ the leading forward interface to creative variations and formats to identify and scale the highest-performing creators.</p>
+                <p>Our ads are tailored and localized to ensure maximum relevance and engagement, driving higher conversion rates for your app.</p>
+                
+                <div class="features">
+                    <div class="feature-card floating">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Track performance in real-time and download detailed reports featuring multi-dimensional analytics.</p>
+                    </div>
+                    
+                    <div class="feature-card floating" style="animation-delay: 0.5s;">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Actionable Dashboards</h3>
+                        <p>Our dashboards provide deep insights, enabling you to manage and optimize campaigns effectively for superior results.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section animate__animated animate__fadeInUp animate-delay-3">
+                <h2>Proven Results</h2>
+                <p>By using these AI-driven strategies, your app marketing campaigns are not only efficient but also highly effective in reaching and engaging the right audience.</p>
+                
+                <div class="clients">
+                    <img src="mamaearth.png" alt="mamaearth" class="client-logo">
+                    <img src="bummer.png" alt="bummer" class="client-logo">
+                    <img src="flipkart.jpeg" alt="Flipkart" class="client-logo">
+                    <img src="amazon.png" alt="amazon prime" class="client-logo">
+                    <img src="booking.png" alt="Booking.com" class="client-logo">
+                </div>
+            </section>
+        </div>
+        
+        <footer class="animate__animated animate__fadeInUp animate-delay-4">
+            <div class="footer-links">
+                <a href="#">ABOUT</a>
+                <a href="#">PRODUCT</a>
+                <a href="#">SOLUTIONS</a>
+                <a href="#">CONTACT US</a>
+            </div>
+            <p>&copy; 2025 MKAds. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

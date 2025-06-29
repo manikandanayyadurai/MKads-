@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iGaming Marketing Solutions | MK Ads</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b8d9;
+      --secondary: #121212;
+      --accent: #f9d342;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+      --gaming-accent: #9c27b0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gaming-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, transparent 0%, rgba(156,39,176,0.1) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(156,39,176,0.5);
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem auto;
+      flex-wrap: wrap;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 220px;
+      border: 1px solid rgba(156,39,176,0.3);
+      transition: all 0.4s ease;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(156,39,176,0.2);
+      box-shadow: 0 12px 40px rgba(156,39,176,0.2);
+    }
+    
+    .stat-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      color: white;
+    }
+    
+    .features {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border-top: 4px solid var(--gaming-accent);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gaming-accent), var(--primary));
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(156,39,176,0.15);
+    }
+    
+    .feature-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--gaming-accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--gaming-accent);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--gaming-accent), var(--dark));
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+      margin-top: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .animate-delay-1 { animation-delay: 0.3s; }
+    .animate-delay-2 { animation-delay: 0.6s; }
+    .animate-delay-3 { animation-delay: 0.9s; }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    
+    .company-info {
+      margin-top: 2rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <div class="logo">MK Ads</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeIn">
+      <h1>Elevate Your Game App Marketing</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">AI-powered solutions to acquire, engage, and retain high-value gamers</p>
+      
+      <div class="stats">
+        <div class="stat-card animate__animated animate__fadeInUp">
+          <div class="stat-value">2.3B+</div>
+          <div class="stat-label">Mobile Profiles</div>
+        </div>
+        <div class="stat-card animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="stat-value">75%</div>
+          <div class="stat-label">Lower UA Costs</div>
+        </div>
+        <div class="stat-card animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="stat-value">5x</div>
+          <div class="stat-label">Higher IAP Rates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card animate__animated animate__fadeInLeft">
+      <div class="feature-icon">🎮</div>
+      <h2>Drive Growth With Targeted Mobile Game Campaigns</h2>
+      <p>Harness our data-driven, deep learning technology to attract high-value players, boost installs, and enhance in-app purchases and engagement for your game. Our platform analyzes millions of data points to identify the most profitable user segments across all game genres.</p>
+      <p>We specialize in performance marketing for:</p>
+      <ul>
+        <li>Hypercasual & Casual Games</li>
+        <li>Midcore & Hardcore Games</li>
+        <li>Social Casino & Gambling Apps</li>
+        <li>Strategy & Simulation Games</li>
+      </ul>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-1s">
+      <div class="feature-icon">👥</div>
+      <h2>Acquire High-Value Gamers</h2>
+      <p>Tap into our fraud-free database of 2.3 billion mobile profiles to identify and target premium users for your game. Our AI-powered algorithms and custom solutions optimize your cost-per-acquisition (CPA) across various game categories.</p>
+      <p>Our targeting includes:</p>
+      <ul>
+        <li>Player behavior analysis</li>
+        <li>Purchase propensity scoring</li>
+        <li>Competitor player targeting</li>
+        <li>Demographic & interest filters</li>
+      </ul>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInLeft animate__delay-2s">
+      <div class="feature-icon">⏱️</div>
+      <h2>Optimize Targeting Timing</h2>
+      <p>Maximize player engagement by targeting users at peak activity times to increase their progression in your game. Our temporal optimization engine identifies the perfect moments to reach potential players when they're most likely to install and engage.</p>
+      <p>Key features:</p>
+      <ul>
+        <li>Dayparting strategies</li>
+        <li>Event-based triggering</li>
+        <li>Seasonal campaign optimization</li>
+        <li>Time-zone aware delivery</li>
+      </ul>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-3s">
+      <div class="feature-icon">💰</div>
+      <h2>Boost In-App Purchases</h2>
+      <p>Adopt a data-centric approach to define campaign goals and segment users based on their historical and projected lifetime value. Our machine learning technology targets look-alike profiles likely to make in-app purchases.</p>
+      <p>Proven tactics:</p>
+      <ul>
+        <li>First-purchase incentive programs</li>
+        <li>Whale player identification</li>
+        <li>Dynamic offer personalization</li>
+        <li>Bundle optimization algorithms</li>
+      </ul>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInLeft">
+      <div class="feature-icon">🔁</div>
+      <h2>Enhance Player Retention</h2>
+      <p>Utilize our advanced DSP technology to identify critical moments in the user lifecycle. Implement strategies to boost retention, introduce new levels and features, and reduce churn.</p>
+      <p>Retention solutions:</p>
+      <ul>
+        <li>Churn prediction modeling</li>
+        <li>Win-back campaigns</li>
+        <li>Personalized content delivery</li>
+        <li>Progression-based messaging</li>
+      </ul>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-1s">
+      <div class="feature-icon">🎨</div>
+      <h2>Deploy High-Performing Creatives</h2>
+      <p>Reach your audience with optimized ads tailored for game apps. Customize playable ads, rewarded video ads, interstitials, and native ads based on user behavior, demographics, and location.</p>
+      <p>Creative services:</p>
+      <ul>
+        <li>Interactive playable ads</li>
+        <li>Video ad sequencing</li>
+        <li>Dynamic creative optimization</li>
+        <li>Localized asset creation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content animate__animated animate__fadeIn">
+      <h2>Ready to Level Up Your Game Marketing?</h2>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Our AI-powered solutions deliver measurable results and sustainable growth for gaming apps</p>
+      <button class="cta-button animate__animated animate__pulse animate__infinite">Get Started Today</button>
+    </div>
+  </section>
+
+  <footer class="animate__animated animate__fadeIn">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <div class="company-info">
+      <p><strong>MK Ads</strong></p>
+      <p>S 317, GK 2, New Delhi, India</p>
+      <p>contact@mkads.com</p>
+      <p>Opening Hours: Monday-Friday | 08:00 AM-06:00 PM</p>
+    </div>
+    
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cancellation.html">Cancellation/Return Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.cta-button').addEventListener('click', function() {
+      window.location.href = 'contact.html';
+    });
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.animate__animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.classList[1];
+            entry.target.classList.add(animation);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>

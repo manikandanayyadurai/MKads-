@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MK Ads</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b8d9;
+      --secondary: #121212;
+      --accent: #f9d342;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    
+    .contact-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('contact-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    
+    .contact-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    
+    .contact-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .info-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    
+    .info-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    
+    .info-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    .info-card p, .info-card a {
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .info-card a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .info-card a:hover {
+      color: var(--dark);
+      text-decoration: underline;
+    }
+    
+    form {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,184,217,0.2);
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--accent);
+      color: var(--dark);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      background: #ffd700;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .map-container {
+      margin: 3rem auto;
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+    
+    .map {
+      height: 400px;
+      background: #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .animate-delay-1 { animation-delay: 0.3s; }
+    .animate-delay-2 { animation-delay: 0.6s; }
+    .animate-delay-3 { animation-delay: 0.9s; }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <div class="logo">MK Ads</div>
+  </header>
+
+  <section class="contact-hero animate__animated animate__fadeIn">
+    <h1>Get In Touch</h1>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">We'd love to hear from you and discuss how we can help grow your business</p>
+  </section>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-card animate__animated animate__fadeInLeft">
+        <h2>Let's Talk</h2>
+        <p><strong>MKAds private limited</strong></p>
+        <p>415 Madison Avenue, 14th Floor<br>Manhattan, New York, 10017</p>
+        
+      </div>
+      
+      <div class="info-card animate__animated animate__fadeInLeft animate__delay-1s">
+        <h2>Contact Details</h2>
+        <p><strong>Email Address:</strong></p>
+        <a href="mailto:contact@mobbeting.com">contact@mkads.com</a>
+        <p><strong>Phone Numbers:</strong></p>
+        <a href="tel:+919650065451">+91 9650065451 (IN)</a>
+        <a href="tel:+13479620478">+1 3479620478 (US)</a>
+      </div>
+      
+      <div class="info-card animate__animated animate__fadeInLeft animate__delay-2s">
+        <h2>Business Hours</h2>
+        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+        <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+        <p><strong>Sunday:</strong> Closed</p>
+      </div>
+    </div>
+    
+    <div class="contact-form animate__animated animate__fadeInRight">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General Inquiry</option>
+            <option value="sales">Sales Question</option>
+            <option value="support">Technical Support</option>
+            <option value="partnership">Partnership Opportunity</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn animate__animated animate__pulse animate__infinite">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="map-container animate__animated animate__fadeIn animate__delay-1s">
+    <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary);">Our Locations</h2>
+    <div class="map">
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256703566!2d-73.97727968459382!3d40.75889597932686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f9cfcb250d%3A0xdb570ddcb766e3a8!2s415%20Madison%20Ave%2C%20New%20York%2C%20NY%2010017%2C%20USA!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script>
+   
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      console.log('Form submitted:', formData);
+      
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+    
+   
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.animate__animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.classList[1];
+            entry.target.classList.add(animation);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>

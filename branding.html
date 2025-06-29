@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data-Driven Branding Solutions | MK Ads</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b8d9;
+      --secondary: #121212;
+      --accent: #f9d342;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('branding-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 3rem auto;
+      flex-wrap: wrap;
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 250px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+    
+    .stat-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      color: var(--dark);
+    }
+    
+    .features {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    
+    .feature-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    
+    .feature-card h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+      margin-top: 3rem;
+    }
+    
+    .cta h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .animate-delay-1 { animation-delay: 0.3s; }
+    .animate-delay-2 { animation-delay: 0.6s; }
+    .animate-delay-3 { animation-delay: 0.9s; }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <div class="logo">MK Ads</div>
+  </header>
+
+  <section class="hero animate__animated animate__fadeIn">
+    <h1>Data-Driven Branding Solutions</h1>
+    <p class="animate__animated animate__fadeIn animate__delay-1s">Programmatic media buying powered by AI and machine learning</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card animate__animated animate__fadeInUp">
+      <div class="stat-value">4000+</div>
+      <div class="stat-label">Recommended Satisfaction</div>
+    </div>
+    <div class="stat-card animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="stat-value">98%</div>
+      <div class="stat-label">Client Retention</div>
+    </div>
+    <div class="stat-card animate__animated animate__fadeInUp animate__delay-2s">
+      <div class="stat-value">5x</div>
+      <div class="stat-label">Average ROI Increase</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card animate__animated animate__fadeInLeft">
+      <h2>Effective Creatives</h2>
+      <p>Deploy ads across native, interstitial, video, and rich media formats. Measure and optimize creatives through multivariate testing for maximum impact.</p>
+      <p>Our AI analyzes thousands of creative variations to identify the highest performing combinations of visuals, copy, and CTAs.</p>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-1s">
+      <h2>Advanced Machine Learning</h2>
+      <p>Utilize our platform to refine bidding strategies, minimize ad spend wastage, and gain audience insights for optimal campaign performance.</p>
+      <p>Our algorithms continuously learn from campaign data to predict the best performing channels, times, and audience segments.</p>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInLeft animate__delay-2s">
+      <h2>Transparent Performance Tracking</h2>
+      <p>Monitor campaign performance with customizable dashboards, make real-time decisions, and enhance campaign effectiveness.</p>
+      <p>Gain access to granular analytics with our intuitive reporting interface that shows exactly where your budget is being spent and what results it's driving.</p>
+    </div>
+    
+    <div class="feature-card animate__animated animate__fadeInRight animate__delay-3s">
+      <h2>Product Value Based Solutions</h2>
+      <p>We develop customized branding strategies that align with your product's unique value proposition and market position.</p>
+      <p>Our approach combines creative storytelling with data-driven insights to build authentic connections with your target audience.</p>
+    </div>
+  </section>
+
+  <section class="cta animate__animated animate__fadeIn">
+    <h2>Ready to Transform Your Brand Strategy?</h2>
+    <p>Our AI-powered solutions deliver measurable results and sustainable growth.</p>
+    <a href="contact.html" class="cta-button animate__animated animate__pulse animate__infinite">Get Started Today</a>
+  </section>
+
+  <script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.animate__animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.classList[1];
+            entry.target.classList.add(animation);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
